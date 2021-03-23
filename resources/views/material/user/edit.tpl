@@ -121,6 +121,23 @@
                 </div>
             </div>
             <div class="col-xx-12 col-sm-6">
+                <div class="card margin-bottom-no">
+                    <div class="card-main">
+                        <div class="card-inner">
+                            <div class="card-inner">
+                                <div class="cardbtn-edit">
+                                    <div class="card-heading">用戶名修改</div>
+                                    <button class="btn btn-flat" id="username-update"><span class="icon">check</span>&nbsp;
+                                    </button>
+                                </div>
+                                <div class="form-group form-group-label">
+                                    <label class="floating-label" for="newusername">新用戶名</label>
+                                    <input class="form-control maxwidth-edit" id="newusername" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {if $config['enable_change_email'] == true}
                     <div class="card margin-bottom-no">
                         <div class="card-main">
@@ -153,23 +170,6 @@
                         </div>
                     </div>
                 {/if}
-                <div class="card margin-bottom-no">
-                    <div class="card-main">
-                        <div class="card-inner">
-                            <div class="card-inner">
-                                <div class="cardbtn-edit">
-                                    <div class="card-heading">用戶名修改</div>
-                                    <button class="btn btn-flat" id="username-update"><span class="icon">check</span>&nbsp;
-                                    </button>
-                                </div>
-                                <div class="form-group form-group-label">
-                                    <label class="floating-label" for="newusername">新用戶名</label>
-                                    <input class="form-control maxwidth-edit" id="newusername" type="text">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="card margin-bottom-no">
                     <div class="card-main">
                         <div class="card-inner">
