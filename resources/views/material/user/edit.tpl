@@ -367,33 +367,6 @@
                         </div>
                     </div>
                 {/if}
-                <div class="card margin-bottom-no">
-                    <div class="card-main">
-                        <div class="card-inner">
-                            <div class="card-inner">
-                                <div class="cardbtn-edit">
-                                    <div class="card-heading">主题修改</div>
-                                    <button class="btn btn-flat" id="theme-update"><span class="icon">check</span>&nbsp;
-                                    </button>
-                                </div>
-                                <p>当前主题：<code data-default="theme">{$user->theme}</code></p>
-                                <div class="form-group form-group-label control-highlight-custom dropdown">
-                                    <label class="floating-label" for="theme">主题</label>
-                                    <button id="theme" type="button" class="form-control maxwidth-edit" data-toggle="dropdown" value="{$user->theme}">
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="mail">
-                                        {foreach $themes as $theme}
-                                            <li>
-                                                <a href="#" class="dropdown-option" onclick="return false;"
-                                                   val="{$theme}" data="theme">{$theme}</a>
-                                            </li>
-                                        {/foreach}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
                 {include file='dialog.tpl'}
         </section>
