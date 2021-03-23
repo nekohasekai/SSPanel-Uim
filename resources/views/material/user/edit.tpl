@@ -23,7 +23,6 @@
                                     </button>
                                 </p>
                                 <p>点击重置按钮将会自动生成由随机字母和数字组成的连接密码。</p>
-                                <p>修改连接密码同时也会自动为您重新生成 V2Ray 和 Trojan 节点的 UUID。</p>
                                 <p>修改连接密码后，您需要更新订阅或修改客户端配置方可继续使用。</p>
                             </div>
                         </div>
@@ -33,18 +32,8 @@
                     <div class="card-main">
                         <div class="card-inner">
                             <div class="card-inner">
-                                <div class="card-heading">选择客户端</div>
-                                <p>SS/SSR 支持的加密方式和混淆方式有所不同，请根据实际情况来进行选择</p>
-                                <p>在这里选择你需要使用的客户端可以帮助你筛选加密方式和混淆方式</p>
-                                <p>auth_chain 系为实验性协议，可能造成不稳定或无法使用</p>
-                                <br>
-                                <button class="btn btn-subscription" type="button" id="filter-btn-ss">SS</button>
-                                <button class="btn btn-subscription" type="button" id="filter-btn-ssr">SSR</button>
-                                <button class="btn btn-subscription" type="button" id="filter-btn-universal">通用</button>
-                            </div>
-                            <div class="card-inner">
                                 <div class="cardbtn-edit">
-                                    <div class="card-heading">加密方式修改</div>
+                                    <div class="card-heading">Shadowsocks 加密方式修改</div>
                                     <button class="btn btn-flat" id="method-update"><span class="icon">check</span>&nbsp
                                     </button>
                                 </div>
@@ -56,7 +45,7 @@
                                     <button id="method" class="form-control maxwidth-edit" data-toggle="dropdown"
                                             value="{$user->method}"></button>
                                     <ul class="dropdown-menu" aria-labelledby="method">
-                                        {$method_list = $config_service->getSupportParam('method')}
+                                        {$method_list = $config_service->getSupportParam('ss_aead_method')}
                                         {foreach $method_list as $method}
                                             <li class="{if URL::CanMethodConnect($user->method) == 2}filter-item-ss{else}filter-item-universal{/if}">
                                                 <a href="#" class="dropdown-option" onclick="return false;"
