@@ -74,6 +74,51 @@
 						</div>
 					</div>
                 </div>
+                <div class="card margin-bottom-no">
+                    <div class="card-main">
+                        <div class="card-inner">
+                            <div class="card-inner">
+                                <div class="cardbtn-edit">
+                                    <div class="card-heading">IP 解封</div>
+                                    <button class="btn btn-flat" id="unblock"><span class="icon">not_interested</span>&nbsp;
+                                    </button>
+                                </div>
+                                <p>当前状态：<code id="ajax-block">{$Block}</code></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card margin-bottom-no">
+                    <div class="card-main">
+                        <div class="card-inner">
+                            <div class="card-inner">
+                                <div class="cardbtn-edit">
+                                    <div class="card-heading">每日使用报告设置</div>
+                                    <button class="btn btn-flat" id="mail-update"><span class="icon">check</span>&nbsp;
+                                    </button>
+                                </div>
+                                <p class="card-heading"></p>
+                                <p>当前设置：<code id="ajax-mail" data-default="mail">{if $user->sendDailyMail == 2}TelegramBot接收{elseif $user->sendDailyMail == 1}邮件接收{else}不发送{/if}</code></p>
+                                <div class="form-group form-group-label control-highlight-custom dropdown">
+                                    <label class="floating-label" for="mail">接收设置</label>
+                                    <button type="button" id="mail" class="form-control maxwidth-edit"
+                                            data-toggle="dropdown" value="{$user->sendDailyMail}"></button>
+                                    <ul class="dropdown-menu" aria-labelledby="mail">
+                                        <li>
+                                            <a href="#" class="dropdown-option" onclick="return false;" val="0" data="mail">不发送</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-option" onclick="return false;" val="1" data="mail">邮件接收</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-option" onclick="return false;" val="2" data="mail">TelegramBot接收</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-xx-12 col-sm-6">
                 {if $config['enable_change_email'] == true}
@@ -145,51 +190,6 @@
                                 <div class="form-group form-group-label">
                                     <label class="floating-label" for="repwd">确认新密码</label>
                                     <input class="form-control maxwidth-edit" id="repwd" type="password">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card margin-bottom-no">
-                    <div class="card-main">
-                        <div class="card-inner">
-                            <div class="card-inner">
-                                <div class="cardbtn-edit">
-                                    <div class="card-heading">IP 解封</div>
-                                    <button class="btn btn-flat" id="unblock"><span class="icon">not_interested</span>&nbsp;
-                                    </button>
-                                </div>
-                                <p>当前状态：<code id="ajax-block">{$Block}</code></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card margin-bottom-no">
-                    <div class="card-main">
-                        <div class="card-inner">
-                            <div class="card-inner">
-                                <div class="cardbtn-edit">
-                                    <div class="card-heading">每日使用报告设置</div>
-                                    <button class="btn btn-flat" id="mail-update"><span class="icon">check</span>&nbsp;
-                                    </button>
-                                </div>
-                                <p class="card-heading"></p>
-                                <p>当前设置：<code id="ajax-mail" data-default="mail">{if $user->sendDailyMail == 2}TelegramBot接收{elseif $user->sendDailyMail == 1}邮件接收{else}不发送{/if}</code></p>
-                                <div class="form-group form-group-label control-highlight-custom dropdown">
-                                    <label class="floating-label" for="mail">接收设置</label>
-                                    <button type="button" id="mail" class="form-control maxwidth-edit"
-                                            data-toggle="dropdown" value="{$user->sendDailyMail}"></button>
-                                    <ul class="dropdown-menu" aria-labelledby="mail">
-                                        <li>
-                                            <a href="#" class="dropdown-option" onclick="return false;" val="0" data="mail">不发送</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown-option" onclick="return false;" val="1" data="mail">邮件接收</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown-option" onclick="return false;" val="2" data="mail">TelegramBot接收</a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
