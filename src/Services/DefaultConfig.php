@@ -378,7 +378,7 @@ class DefaultConfig
             'Register.string.defaultExpire_in' => [
                 'key'           => $key,
                 'type'          => 'string',
-                'value'         => '3650',
+                'value'         => '30',
                 'name'          => '默认账户过期时间',
                 'comment'       => '用户账户过期时间，在注册时设置（天）',
                 'operator_id'   => 0,
@@ -396,7 +396,7 @@ class DefaultConfig
             'Register.string.defaultMethod' => [
                 'key'           => $key,
                 'type'          => 'string',
-                'value'         => 'chacha20-ietf',
+                'value'         => 'chacha20-ietf-poly1305',
                 'name'          => '注册时默认加密方式',
                 'comment'       => '',
                 'operator_id'   => 0,
@@ -405,7 +405,7 @@ class DefaultConfig
             'Register.string.defaultProtocol' => [
                 'key'           => $key,
                 'type'          => 'string',
-                'value'         => 'auth_aes128_sha1',
+                'value'         => 'origin',
                 'name'          => '注册时默认协议',
                 'comment'       => '',
                 'operator_id'   => 0,
@@ -423,7 +423,7 @@ class DefaultConfig
             'Register.string.defaultObfs' => [
                 'key'           => $key,
                 'type'          => 'string',
-                'value'         => 'http_simple',
+                'value'         => 'origin',
                 'name'          => '注册时默认混淆方式',
                 'comment'       => '',
                 'operator_id'   => 0,
@@ -442,7 +442,7 @@ class DefaultConfig
             'Register.string.defaultInviteNum' => [
                 'key'           => $key,
                 'type'          => 'string',
-                'value'         => '10',
+                'value'         => '-1',
                 'name'          => '邀请链接可用次数',
                 'comment'       => '注册后的邀请链接可用次数',
                 'operator_id'   => 0,
