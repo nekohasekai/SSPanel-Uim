@@ -75,13 +75,13 @@
                                                 <div class="cardbtn-edit">
                                                     <div class="card-heading">定制链接后缀 {if $config['custom_invite_price']>0}<code
                                                                 class="card-tag tag-green">{$config['custom_invite_price']}
-                                                            RMB/次</code></div>
+                                                            RMB/次</code>{/if}</div>
                                                     <button class="btn btn-flat" id="custom-invite-confirm"><span
                                                                 class="icon">check</span>&nbsp;
                                                     </button>
                                                 </div>
                                                 <p>例:输入<code>nya</code>则链接变为<code>{$config['baseUrl']}
-                                                        /auth/register?code=nya</code>{/if}</p>
+                                                        /auth/register?code=nya</code></p>
                                                 <div class="form-group form-group-label">
                                                     <label class="floating-label"
                                                            for="custom-invite-link">输入链接后缀</label>
