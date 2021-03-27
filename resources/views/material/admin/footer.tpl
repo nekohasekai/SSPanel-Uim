@@ -1,6 +1,6 @@
 <footer class="ui-footer">
     <div class="container">
-        &copy;{date("Y")} {$config['appName']} | Powered by <a href="/staff">SSPANEL</a>
+        &copy;{date("Y")} {$config['appName']} | Powered by <a href="https://github.com/nekohasekai/SSPanel-Uim">SSPanel-Uim</a> | Modified by nekohasekai
         {if $config['enable_analytics_code'] === true}{include file='analytics.tpl'}{/if}
     </div>
 </footer>
