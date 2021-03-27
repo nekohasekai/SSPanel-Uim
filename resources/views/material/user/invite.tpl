@@ -38,8 +38,7 @@
                                                             class="reset-link btn btn-brand-accent btn-flat"><i
                                                                 class="icon">autorenew</i>&nbsp;</a></div>
                                             </div>
-                                            <p>剩余可邀请次数：{if $user->invite_num<0}无限{else}
-                                                <code>{$user->invite_num}</code>{/if}</p>
+                                            {if $user->invite_num>=0}<p>剩余可邀请次数：<code>{$user->invite_num}</code></p>{/if}
                                             <p>发送邀请链接给有需要的人，邀请他人注册时，请将以下链接发给被邀请者</p>
                                             <div class="invite-link">
                                                 <input type="text"
@@ -48,16 +47,6 @@
                                                        value="{$config['baseUrl']}/auth/register?code={$code->code}">
                                                 <button class="copy-text btn btn-subscription" type="button"
                                                         data-clipboard-text="{$config['baseUrl']}/auth/register?code={$code->code}">
-                                                    点击复制
-                                                </button>
-                                            </div>
-                                            <div class="invite-link">
-                                                <input type="text"
-                                                       class="input form-control form-control-monospace cust-link"
-                                                       name="input2" readonly=""
-                                                       value="{$config['baseUrl']}/#/auth/register?code={$code->code}">
-                                                <button class="copy-text btn btn-subscription" type="button"
-                                                        data-clipboard-text="{$config['baseUrl']}/#/auth/register?code={$code->code}">
                                                     点击复制
                                                 </button>
                                             </div>
